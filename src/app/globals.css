@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #f8f9fa;
+  --bg-dark: #222222;
+  --bg-overlay: rgba(0, 0, 0, 0.05);
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --text-light: #FFFFFF;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
+  --brand-primary: #00488b;
+  --brand-hover: #003366;
+  --brand-highlight: #b80101;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* App Container - No center align */
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--brand-primary);
+  color: var(--text-light);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+:nth-child(1 of .shape) {
+  clip-path: shape(
+    from 0 100%,
+    arc by var(--r) calc(-1*var(--r)) of var(--r),
+    vline to var(--r),
+    arc by var(--r) calc(-1*var(--r)) of var(--r) cw,
+    hline to calc(100% - 2*var(--r)),
+    arc by var(--r) var(--r) of var(--r) cw,
+    vline to calc(100% - var(--r)),
+    arc by var(--r) var(--r) of var(--r)
+  )
+}
+
+.shape {
+  --r: 26px;
+
+}
+
+button{
+  cursor:  pointer !important;
 }
