@@ -21,15 +21,16 @@ const PainPoints = () => {
               className="p-6 bg-white/70 backdrop-blur-sm border border-white/80 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-400 group rounded-xl"
             >
               {/* Number */}
-              <div className="w-8 h-8 flex items-center justify-center bg-[#b80101] text-white text-sm font-medium mb-4 group-hover:bg-[#00488b] transition-all duration-300 rounded-md">
-                {String(index + 1).padStart(2, "0")}
+              <div className="flex gap-4  mb-4 min-h-13">
+                <div className="w-8 h-8 flex items-center justify-center bg-[#b80101] text-white text-sm font-medium  group-hover:bg-[#00488b] transition-all duration-300 rounded-md shrink-0">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                {/* Heading */}
+                <h3 className="text-lg font-semibold text-[#222222]  leading-snug  flex items-start">
+                  {point.title}
+                </h3>
               </div>
-
-              {/* Heading */}
-              <h3 className="text-lg font-semibold text-[#222222] mb-2 leading-snug min-h-13 flex items-start">
-                {point.title}
-              </h3>
-
               {/* Description */}
               <p className="text-[#555555] text-base leading-relaxed">
                 {point.description}

@@ -15,7 +15,7 @@ import { companyInfo } from "@/data/mock";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-16 max-w-348 mx-auto rounded-4xl mb-1 bg-[#222222]">
+    <footer className="relative mt-16 max-w-348 mx-auto rounded-t-4xl md:rounded-4xl md:mb-1 bg-[#222222]">
       <div className="mx-auto max-w-7xl px-4 py-10 pb-0">
         {/* Main Footer Content */}
         <div className="relative   ">
@@ -201,7 +201,7 @@ const Footer = () => {
         </div>
 
         {/* bottom bar */}
-        <div className=" flex flex-col items-center justify-between gap-2  py-4 pb-6 px-10 md:px-12 shape translate-y-1  bg-white small-text text-dark md:flex-row ">
+        <div className=" flex flex-col items-center justify-between gap-2  py-4 pb-6 px-10 md:px-12 shape md:translate-y-1  bg-white small-text text-dark md:flex-row ">
           <span>
             © {new Date().getFullYear()} PASOVIT. All rights reserved.
           </span>
