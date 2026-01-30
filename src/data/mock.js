@@ -12,12 +12,36 @@ export const companyInfo = {
 };
 
 export const painPoints = [
-  "Tired of sourcing, interviewing, and testing developers who can't ship production code",
-  "Burning time and money training devs on your domain, only to have them quit or get poached",
-  "Working with freelancers that disappear mid-project or miss deadlines",
-  "Internal devs stuck fixing bugs instead of building new revenue-generating features",
-  "Every new project means starting from scratch: new vendor, new contracts, new mess",
-  "No clear product owner leading to changing priorities and unfinished work",
+  {
+    title: "Developers Who Can’t Deliver",
+    description:
+      "Tired of sourcing, interviewing, and testing developers who can't ship production code",
+  },
+  {
+    title: "Training Talent Just to Watch Them Leave",
+    description:
+      "Burning time and money training devs on your domain, only to have them quit or get poached",
+  },
+  {
+    title: "Freelancers Who Ghost Mid-Project",
+    description:
+      "Working with freelancers that disappear mid-project or miss deadlines",
+  },
+  {
+    title: "Your Team Is Buried in Bug Fixes",
+    description:
+      "Internal devs stuck fixing bugs instead of building new revenue-generating features",
+  },
+  {
+    title: "Rebuilding From Scratch Every Time",
+    description:
+      "Every new project means starting from scratch: new vendor, new contracts, new mess",
+  },
+  {
+    title: "No Product Owner. No Clear Direction.",
+    description:
+      "No clear product owner leading to changing priorities and unfinished work",
+  },
 ];
 
 export const targetAudience = [

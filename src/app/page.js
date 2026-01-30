@@ -11,6 +11,7 @@ import ContactSection from "@/components/home/ContactSection";
 import TechStack from "@/components/home/TechStack";
 import ClientLogoLoop from "@/components/home/ClientLogoLoop";
 import CalEmbed from "@/components/home/CalEmbed";
+import PricingTable from "@/components/home/PricingTable";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Process />
         <WhatWeBuild />
         <ServicesPreview />
+        <PricingTable />
         <FlexibleOptions />
         <Guarantees />
         <CaseStudiesPreview />

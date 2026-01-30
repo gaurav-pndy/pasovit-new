@@ -121,11 +121,11 @@ const CaseStudiesPage = () => {
                       </div>
 
                       {/* Duration Badge */}
-                      <div className="absolute top-4 right-4">
+                      {/* <div className="absolute top-4 right-4">
                         <span className="px-3 py-1 bg-white/90 text-[#222222] text-xs font-medium rounded">
                           {study.duration}
                         </span>
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Content */}
@@ -141,11 +141,11 @@ const CaseStudiesPage = () => {
                       </p>
 
                       {/* Results Preview */}
-                      <div className="flex items-center gap-4 pt-4 border-t border-black/10">
+                      {/* <div className="flex items-center gap-4 pt-4 border-t border-black/10">
                         <span className="text-[#b80101] text-sm font-semibold">
                           {study.results[0]}
                         </span>
-                      </div>
+                      </div> */}
 
                       {/* View Link */}
                       <div className="flex items-center gap-2 mt-4 text-[#00488b] group-hover:text-[#003366] transition-colors duration-300">

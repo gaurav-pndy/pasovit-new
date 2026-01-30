@@ -15,7 +15,7 @@ import { companyInfo } from "@/data/mock";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-16 max-w-348 mx-auto rounded-4xl mb-1 bg-[#1a1a1a]">
+    <footer className="relative mt-16 max-w-348 mx-auto rounded-4xl mb-1 bg-[#222222]">
       <div className="mx-auto max-w-7xl px-4 py-10 pb-0">
         {/* Main Footer Content */}
         <div className="relative   ">

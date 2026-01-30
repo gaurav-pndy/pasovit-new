@@ -83,7 +83,10 @@ const logos = [
 
 const TechStack = () => {
   return (
-    <section className="w-full  py-16" aria-label="Partner logos carousel">
+    <section
+      className="w-full  py-10 bg-[#222222] text-white"
+      aria-label="Partner logos carousel"
+    >
       <p className="text-2xl  font-semibold mb-6 text-center ">
         Technologies we use:
       </p>

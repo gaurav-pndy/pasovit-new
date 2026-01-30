@@ -16,27 +16,30 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-[58px] font-bold leading-[1.1] tracking-tight text-[#222222]">
-              {companyInfo.tagline}
+              One Subscription. <br /> Reliable Dev Team. <br /> Real Output.
             </h1>
 
             <p className="text-lg md:text-xl text-[#555555] max-w-xl leading-relaxed">
-              {companyInfo.description}
+              We run your product development end-to-end. No hiring, no
+              turnover, no freelancers disappearing. Just consistent delivery
+              from a team that knows your business.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="/services"
-                className="inline-flex items-center justify-between px-6 py-4 bg-[#00488b] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366] hover:shadow-xl hover:shadow-[#00488b]/20 min-h-14 group rounded-md"
+                className="inline-flex items-center justify-between px-6 py-4 bg-linear-to-b from-[#00488b] to-[#003b72] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366]  min-h-14 group rounded-md shadow-[inset_0_1px_0.25px_rgba(0,0,0,0.3),inset_0_2px_1px_rgba(0,0,0,0.2)] hover:-translate-y-0.5
+"
               >
-                View Plans
+                Learn More
                 <ArrowRight
                   size={20}
                   className="ml-3 group-hover:translate-x-1 transition-transform duration-300"
-                />
+                />{" "}
               </Link>
               <Link
                 href="/case-studies"
-                className="inline-flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-sm border border-black/10 text-[#222222] font-medium text-lg transition-all duration-400 hover:bg-white hover:shadow-lg min-h-14 group rounded-md"
+                className="inline-flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-sm border border-black/10 text-[#222222] font-medium text-lg transition-all duration-400 hover:bg-white  min-h-14 group rounded-md shadow-[inset_0_1px_0.25px_rgba(100,100,100,0.4),inset_0_2px_1px_rgba(100,100,100,0.2)] hover:-translate-y-0.5"
               >
                 See Our Work
                 <ArrowUpRight
@@ -44,24 +47,6 @@ export default function Hero() {
                   className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
                 />
               </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center gap-8 pt-8">
-              <div>
-                <p className="text-3xl font-bold text-[#b80101]">50+</p>
-                <p className="text-sm text-[#888888]">Projects Delivered</p>
-              </div>
-              <div className="w-px h-12 bg-black/10" />
-              <div>
-                <p className="text-3xl font-bold text-[#b80101]">99.9%</p>
-                <p className="text-sm text-[#888888]">Uptime Guarantee</p>
-              </div>
-              <div className="w-px h-12 bg-black/10" />
-              <div>
-                <p className="text-3xl font-bold text-[#b80101]">24h</p>
-                <p className="text-sm text-[#888888]">Response Time</p>
-              </div>
             </div>
           </div>
 
