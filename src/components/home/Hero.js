@@ -10,11 +10,11 @@ import { companyInfo } from "@/data/mock";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-24 ">
+    <section className="min-h-screen flex items-center pt-24 mb-12 md:mb-0">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%] w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-[58px] font-bold leading-[1.1] tracking-tight text-[#222222]">
               One Subscription. <br /> Reliable Dev Team. <br /> Real Output.
             </h1>
@@ -51,36 +51,36 @@ export default function Hero() {
           </div>
 
           {/* Right Content - Code Editor Visual */}
-          <div className="hidden md:block relative">
+          <div className=" relative">
             <div className="relative w-full max-w-145 mx-auto">
-              <div className="relative bg-white/60 backdrop-blur-xl border border-white/80 rounded-2xl p-6 shadow-2xl shadow-black/5">
+              <div className="relative bg-white/60 backdrop-blur-xl border border-white/80 rounded-2xl p-4 md:p-6 shadow-2xl shadow-black/5">
                 {/* Code Editor Mockup */}
                 <div className="bg-[#1a1a2e] rounded-xl overflow-hidden shadow-2xl">
-                  <div className="flex items-center gap-2 px-4 py-3 bg-[#16162a] border-b border-white/5">
-                    <div className="w-3 h-3 rounded-full bg-[#b80101]"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    <span className="ml-4 text-white/40 text-sm">
+                  <div className="flex items-center gap-2 px-4 py-2 md:py-3 bg-[#16162a] border-b border-white/5">
+                    <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-[#b80101]"></div>
+                    <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-green-500"></div>
+                    <span className="ml-4 text-white/40 text-xs md:text-sm">
                       your-project.tsx
                     </span>
                   </div>
-                  <div className="p-6 font-mono text-sm">
+                  <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
                     <div className="text-[#6b7280]">
                       // Your dedicated dev team
                     </div>
-                    <div className="mt-2">
+                    <div className="mt-2 ">
                       <span className="text-purple-400">const</span>
                       <span className="text-white"> project </span>
                       <span className="text-purple-400">=</span>
                       <span className="text-white"> {"{"}</span>
                     </div>
-                    <div className="ml-4">
+                    <div className="ml-4 ">
                       <span className="text-[#60a5fa]">team</span>
                       <span className="text-white">: </span>
                       <span className="text-emerald-400">"PASOVIT"</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="ml-4">
+                    <div className="ml-4 ">
                       <span className="text-[#60a5fa]">delivery</span>
                       <span className="text-white">: </span>
                       <span className="text-emerald-400">"weekly"</span>
@@ -94,7 +94,7 @@ export default function Hero() {
                       </span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="ml-4">
+                    <div className="ml-4 ">
                       <span className="text-[#60a5fa]">stress</span>
                       <span className="text-white">: </span>
                       <span className="text-[#b80101]">null</span>
@@ -102,11 +102,11 @@ export default function Hero() {
                     <div>
                       <span className="text-white">{"}"};</span>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 ">
                       <span className="text-purple-400">await</span>
                       <span className="text-white"> shipFaster(project);</span>
                     </div>
-                    <div className="mt-2 flex items-center gap-2">
+                    <div className="mt-2 flex items-center gap-2 ">
                       <span className="text-emerald-400">✓</span>
                       <span className="text-emerald-400">Build successful</span>
                     </div>
@@ -114,14 +114,14 @@ export default function Hero() {
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-14 h-14 bg-white rounded-xl shadow-lg flex items-center justify-center border border-black/5">
-                  <Globe className="w-7 h-7 text-[#00488b]" />
+                <div className="absolute -top-4 -right-4 w-10 md:w-14 h-10 md:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center border border-black/5">
+                  <Globe className="w-5 md:w-7 h-5 md:h-7 text-[#00488b]" />
                 </div>
-                <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center border border-black/5">
-                  <Database className="w-6 h-6 text-[#00488b]" />
+                <div className="absolute -bottom-3 -left-3 w-8 md:w-12 h-8 md:h-12 bg-white rounded-lg shadow-lg flex items-center justify-center border border-black/5">
+                  <Database className="w-4 md:w-6 h-4 md:h-6 text-[#00488b]" />
                 </div>
-                <div className="absolute top-1/2 -right-5 w-10 h-10 bg-[#00488b] rounded-lg shadow-lg flex items-center justify-center">
-                  <Server className="w-5 h-5 text-white" />
+                <div className="absolute top-1/2 -right-5 w-6 md:w-10 h-6 md:h-10 bg-[#00488b] rounded-lg shadow-lg flex items-center justify-center">
+                  <Server className="h-3 md:w-5 h-3 md:h-5 text-white" />
                 </div>
               </div>
             </div>

@@ -20,7 +20,7 @@ const ClientLogoLoop = () => {
         <div className="flex items-center gap-8">
           {/* Left Label */}
           <p className="shrink-0 text-sm md:text-base uppercase font-semibold tracking-wide text-[#222222]">
-            Trusted by the best
+            Trusted by <br className="md:hidden"/> the best
           </p>
 
           {/* Full-bleed right container */}
@@ -39,7 +39,7 @@ const ClientLogoLoop = () => {
                 {logos.map((logo) => (
                   <div
                     key={logo.name}
-                    className="px-6 flex h-12 items-center justify-center"
+                    className="px-6 flex h-8 md:h-12 items-center justify-center"
                   >
                     <img
                       src={logo.src}
