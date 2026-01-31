@@ -31,7 +31,7 @@ export default async function CaseStudyDetailPage({ params }) {
         <div className="absolute top-8 left-5 md:left-[7.6923%] z-10">
           <Link
             href="/case-studies"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm border border-black/10 text-[#222222] hover:bg-[#00488b] hover:text-white hover:border-[#00488b] transition-all duration-300 rounded-md"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm border border-black/10 text-[#222222] hover:bg-blue hover:text-white hover:border-blue transition-all duration-300 rounded-md"
           >
             <ArrowLeft size={16} />
             <span className="text-sm font-medium">Back to Case Studies</span>
@@ -51,7 +51,7 @@ export default async function CaseStudyDetailPage({ params }) {
           <div className="absolute bottom-0 left-0 right-0">
             <div className="max-w-350 mx-auto px-5 md:px-[7.6923%] pb-12 md:pb-16">
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="px-4 py-1.5 bg-[#b80101] text-white text-sm font-medium rounded">
+                <span className="px-4 py-1.5 bg-red text-white text-sm font-medium rounded">
                   {study.category}
                 </span>
                 <span className="flex items-center gap-2 text-white/80 text-sm">
@@ -87,7 +87,7 @@ export default async function CaseStudyDetailPage({ params }) {
               {/* Challenge */}
               <div>
                 <h2 className="text-2xl font-bold text-[#222222] mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white text-sm font-medium rounded">
+                  <span className="w-8 h-8 flex items-center justify-center bg-blue text-white text-sm font-medium rounded">
                     01
                   </span>
                   The Challenge
@@ -100,7 +100,7 @@ export default async function CaseStudyDetailPage({ params }) {
               {/* Solution */}
               <div>
                 <h2 className="text-2xl font-bold text-[#222222] mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white text-sm font-medium rounded">
+                  <span className="w-8 h-8 flex items-center justify-center bg-blue text-white text-sm font-medium rounded">
                     02
                   </span>
                   Our Solution
@@ -113,7 +113,7 @@ export default async function CaseStudyDetailPage({ params }) {
               {/* Results */}
               <div>
                 <h2 className="text-2xl font-bold text-[#222222] mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 flex items-center justify-center bg-[#b80101] text-white text-sm font-medium rounded">
+                  <span className="w-8 h-8 flex items-center justify-center bg-red text-white text-sm font-medium rounded">
                     03
                   </span>
                   The Results
@@ -122,12 +122,12 @@ export default async function CaseStudyDetailPage({ params }) {
                   {study.results.map((result, index) => (
                     <div
                       key={index}
-                      className="p-6 border border-black/10 bg-[#f8f9fa] hover:border-[#00488b]/30 hover:shadow-md transition-all duration-300 rounded-lg"
+                      className="p-6 border border-black/10 bg-[#f8f9fa] hover:border-blue/30 hover:shadow-md transition-all duration-300 rounded-lg"
                     >
                       <div className="flex items-start gap-3">
                         <Check
                           size={20}
-                          className="text-[#00488b] mt-0.5 shrink-0"
+                          className="text-blue mt-0.5 shrink-0"
                         />
                         <span className="text-[#222222] font-medium">
                           {result}
@@ -187,7 +187,7 @@ export default async function CaseStudyDetailPage({ params }) {
                 </div>
 
                 {/* CTA */}
-                <div className="p-6 border-2 border-[#00488b] bg-white rounded-lg">
+                <div className="p-6 border-2 border-blue bg-white rounded-lg">
                   <h3 className="text-lg font-semibold text-[#222222] mb-3">
                     Want similar results?
                   </h3>
@@ -197,7 +197,7 @@ export default async function CaseStudyDetailPage({ params }) {
                   </p>
                   <Link
                     href="/services"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#00488b] text-white font-medium transition-all duration-400 hover:bg-[#003366] rounded-md"
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue text-white font-medium transition-all duration-400 hover:bg-[#003366] rounded-md"
                   >
                     Get Started
                     <ArrowUpRight size={16} className="ml-2" />
@@ -215,7 +215,7 @@ export default async function CaseStudyDetailPage({ params }) {
           <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
             <div className="flex items-end justify-between mb-12">
               <div>
-                <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-2">
+                <p className="text-red text-sm font-semibold tracking-wider uppercase mb-2">
                   Continue Exploring
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#222222]">
@@ -224,7 +224,7 @@ export default async function CaseStudyDetailPage({ params }) {
               </div>
               <Link
                 href="/case-studies"
-                className="hidden md:inline-flex items-center gap-2 text-[#00488b] hover:text-[#003366] font-medium transition-colors duration-300"
+                className="hidden md:inline-flex items-center gap-2 text-blue hover:text-[#003366] font-medium transition-colors duration-300"
               >
                 View All
                 <ArrowUpRight size={16} />
@@ -238,7 +238,7 @@ export default async function CaseStudyDetailPage({ params }) {
                   href={`/case-studies/${relatedStudy.id}`}
                   className="group block"
                 >
-                  <article className="border border-black/10 bg-white hover:border-[#00488b]/30 hover:shadow-xl transition-all duration-400 overflow-hidden rounded-lg">
+                  <article className="border border-black/10 bg-white hover:border-blue/30 hover:shadow-xl transition-all duration-400 overflow-hidden rounded-lg">
                     <div className="relative overflow-hidden aspect-video">
                       <img
                         src={relatedStudy.image}
@@ -247,7 +247,7 @@ export default async function CaseStudyDetailPage({ params }) {
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 bg-[#b80101] text-white text-xs font-medium rounded">
+                        <span className="px-3 py-1 bg-red text-white text-xs font-medium rounded">
                           {relatedStudy.category}
                         </span>
                       </div>
@@ -256,7 +256,7 @@ export default async function CaseStudyDetailPage({ params }) {
                       <p className="text-[#888888] text-sm mb-2">
                         {relatedStudy.client}
                       </p>
-                      <h3 className="text-xl font-semibold text-[#222222] mb-2 group-hover:text-[#00488b] transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-[#222222] mb-2 group-hover:text-blue transition-colors duration-300">
                         {relatedStudy.title}
                       </h3>
                       <p className="text-[#555555] text-sm line-clamp-2">

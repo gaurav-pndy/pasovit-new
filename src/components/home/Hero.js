@@ -28,7 +28,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="/services"
-                className="inline-flex items-center justify-between px-6 py-4 bg-linear-to-b from-[#00488b] to-[#003b72] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366]  min-h-14 group rounded-md shadow-[inset_0_1px_0.25px_rgba(0,0,0,0.3),inset_0_2px_1px_rgba(0,0,0,0.2)] hover:-translate-y-0.5
+                className="inline-flex items-center justify-between px-6 py-4 bg-linear-to-b from-blue to-[#003b72] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366]  min-h-14 group rounded-md shadow-[inset_0_1px_0.25px_rgba(0,0,0,0.3),inset_0_2px_1px_rgba(0,0,0,0.2)] hover:-translate-y-0.5
 "
               >
                 Learn More
@@ -57,7 +57,7 @@ export default function Hero() {
                 {/* Code Editor Mockup */}
                 <div className="bg-[#1a1a2e] rounded-xl overflow-hidden shadow-2xl">
                   <div className="flex items-center gap-2 px-4 py-2 md:py-3 bg-[#16162a] border-b border-white/5">
-                    <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-[#b80101]"></div>
+                    <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-red"></div>
                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-green-500"></div>
                     <span className="ml-4 text-white/40 text-xs md:text-sm">
@@ -97,7 +97,7 @@ export default function Hero() {
                     <div className="ml-4 ">
                       <span className="text-[#60a5fa]">stress</span>
                       <span className="text-white">: </span>
-                      <span className="text-[#b80101]">null</span>
+                      <span className="text-red">null</span>
                     </div>
                     <div>
                       <span className="text-white">{"}"};</span>
@@ -115,12 +115,12 @@ export default function Hero() {
 
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-10 md:w-14 h-10 md:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center border border-black/5">
-                  <Globe className="w-5 md:w-7 h-5 md:h-7 text-[#00488b]" />
+                  <Globe className="w-5 md:w-7 h-5 md:h-7 text-blue" />
                 </div>
                 <div className="absolute -bottom-3 -left-3 w-8 md:w-12 h-8 md:h-12 bg-white rounded-lg shadow-lg flex items-center justify-center border border-black/5">
-                  <Database className="w-4 md:w-6 h-4 md:h-6 text-[#00488b]" />
+                  <Database className="w-4 md:w-6 h-4 md:h-6 text-blue" />
                 </div>
-                <div className="absolute top-1/2 -right-5 w-6 md:w-10 h-6 md:h-10 bg-[#00488b] rounded-lg shadow-lg flex items-center justify-center">
+                <div className="absolute top-1/2 -right-5 w-6 md:w-10 h-6 md:h-10 bg-blue rounded-lg shadow-lg flex items-center justify-center">
                   <Server className="h-3 md:w-5 h-3 md:h-5 text-white" />
                 </div>
               </div>

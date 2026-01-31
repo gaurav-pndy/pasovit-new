@@ -6,7 +6,7 @@ const PainPoints = () => {
     <section className="py-16">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
         <div className="max-w-3xl mb-16">
-          <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-4">
+          <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
             The Problem
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#222222] leading-tight">
@@ -22,7 +22,7 @@ const PainPoints = () => {
             >
               {/* Number */}
               <div className="flex gap-4  mb-4 min-h-13">
-                <div className="w-8 h-8 flex items-center justify-center bg-[#b80101] text-white text-sm font-medium  group-hover:bg-[#00488b] transition-all duration-300 rounded-md shrink-0">
+                <div className="w-8 h-8 flex items-center justify-center bg-red text-white text-sm font-medium  group-hover:bg-blue transition-all duration-300 rounded-md shrink-0">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 

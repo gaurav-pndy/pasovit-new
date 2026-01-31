@@ -62,8 +62,8 @@ const Header = () => {
             href="/"
             className={`text-sm font-medium transition-colors duration-300 ${
               isActive("/")
-                ? "text-[#00488b]"
-                : "text-[#555555] hover:text-[#00488b]"
+                ? "text-blue"
+                : "text-[#555555] hover:text-blue"
             }`}
           >
             Home
@@ -72,8 +72,8 @@ const Header = () => {
             href="/services"
             className={`text-sm font-medium transition-colors duration-300 ${
               isActive("/services")
-                ? "text-[#00488b]"
-                : "text-[#555555] hover:text-[#00488b]"
+                ? "text-blue"
+                : "text-[#555555] hover:text-blue"
             }`}
           >
             Services
@@ -94,15 +94,15 @@ const Header = () => {
             href="/case-studies"
             className={`text-sm font-medium transition-colors duration-300 ${
               isActive("/case-studies")
-                ? "text-[#00488b]"
-                : "text-[#555555] hover:text-[#00488b]"
+                ? "text-blue"
+                : "text-[#555555] hover:text-blue"
             }`}
           >
             Case Studies
           </Link>
           <button
             onClick={() => scrollToSection("contact-us")}
-            className="inline-flex items-center justify-center px-5 py-2 bg-[#00488b] text-white text-sm font-medium transition-all duration-300 hover:bg-[#003366] rounded-md cursor-pointer!"
+            className="inline-flex items-center justify-center px-5 py-2 bg-blue text-white text-sm font-medium transition-all duration-300 hover:bg-[#003366] rounded-md cursor-pointer!"
           >
             Book a Call
           </button>
@@ -131,7 +131,7 @@ const Header = () => {
             href="/"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`text-base font-medium py-2 transition-colors duration-300 ${
-              isActive("/") ? "text-[#00488b]" : "text-[#555555]"
+              isActive("/") ? "text-blue" : "text-[#555555]"
             }`}
           >
             Home
@@ -140,7 +140,7 @@ const Header = () => {
             href="/services"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`text-base font-medium py-2 transition-colors duration-300 ${
-              isActive("/services") ? "text-[#00488b]" : "text-[#555555]"
+              isActive("/services") ? "text-blue" : "text-[#555555]"
             }`}
           >
             Services
@@ -149,7 +149,7 @@ const Header = () => {
             href="/case-studies"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`text-base font-medium py-2 transition-colors duration-300 ${
-              isActive("/case-studies") ? "text-[#00488b]" : "text-[#555555]"
+              isActive("/case-studies") ? "text-blue" : "text-[#555555]"
             }`}
           >
             Case Studies
@@ -159,7 +159,7 @@ const Header = () => {
               scrollToSection("contact-us");
               setIsMobileMenuOpen(false);
             }}
-            className="inline-flex items-center justify-center px-6 py-3 bg-[#00488b] text-white font-medium rounded-md mt-2"
+            className="inline-flex items-center justify-center px-6 py-3 bg-blue text-white font-medium rounded-md mt-2"
           >
             Book a Call
           </button>

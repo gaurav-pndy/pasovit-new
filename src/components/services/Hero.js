@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="py-16 md:py-24  bg-white border-b border-black/10">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
         <div className="max-w-4xl">
-          <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-4">
+          <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
             Services & Pricing
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.1] tracking-tight text-[#222222] mb-6">

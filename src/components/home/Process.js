@@ -6,7 +6,7 @@ const Process = () => {
     <section className="py-16 overflow-hidden">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-4">
+          <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
             Our Process
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#222222] leading-tight mb-6">
@@ -23,7 +23,7 @@ const Process = () => {
         <div className="relative mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-10 bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00488b]/10 text-[#00488b] text-sm font-semibold rounded-md">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue/10 text-blue text-sm font-semibold rounded-md">
                 <Layers size={16} />
                 <span>CLIENT PORTAL</span>
               </div>
@@ -45,8 +45,8 @@ const Process = () => {
                   "Direct access to your dedicated team",
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-md bg-[#00488b]/10 flex items-center justify-center">
-                      <Check size={12} className="text-[#00488b]" />
+                    <div className="w-5 h-5 rounded-md bg-blue/10 flex items-center justify-center">
+                      <Check size={12} className="text-blue" />
                     </div>
                     <span className="text-[#555555]">{feature}</span>
                   </li>
@@ -56,7 +56,7 @@ const Process = () => {
             <div className="relative">
               <div className="bg-[#1a1a2e] rounded-xl p-5 shadow-2xl">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#b80101]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-red"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                   <span className="ml-3 text-white/40 text-xs">
@@ -77,9 +77,9 @@ const Process = () => {
                       Done
                     </span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-[#00488b]/30">
+                  <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-blue/30">
                     <div className="flex items-center gap-3">
-                      <div className="w-7 h-7 bg-[#00488b]/20 rounded-md flex items-center justify-center">
+                      <div className="w-7 h-7 bg-blue/20 rounded-md flex items-center justify-center">
                         <Code size={12} className="text-[#60a5fa]" />
                       </div>
                       <span className="text-white/80 text-sm">
@@ -110,7 +110,7 @@ const Process = () => {
                     <span className="text-[#60a5fa] font-medium">67%</span>
                   </div>
                   <div className="mt-2 h-1.5 bg-white/10 rounded-md overflow-hidden">
-                    <div className="h-full w-2/3 bg-linear-to-r from-[#00488b] to-[#60a5fa] rounded-md"></div>
+                    <div className="h-full w-2/3 bg-linear-to-r from-blue to-[#60a5fa] rounded-md"></div>
                   </div>
                 </div>
               </div>
@@ -154,10 +154,10 @@ const Process = () => {
             return (
               <div key={item.step} className="relative group">
                 <div className="p-6 bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-400 h-full">
-                  <div className="w-14 h-14 flex items-center justify-center bg-linear-to-br from-[#00488b] to-[#003366] text-white mb-5 transition-all duration-400 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#00488b]/20 rounded-xl">
+                  <div className="w-14 h-14 flex items-center justify-center bg-linear-to-br from-blue to-[#003366] text-white mb-5 transition-all duration-400 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue/20 rounded-xl">
                     <IconComponent size={24} />
                   </div>
-                  <span className="text-xs font-semibold text-[#00488b] mb-2 block">
+                  <span className="text-xs font-semibold text-blue mb-2 block">
                     STEP {item.step}
                   </span>
                   <h3 className="text-lg font-semibold text-[#222222] mb-2">

@@ -29,7 +29,7 @@ const CaseStudiesPage = () => {
       <section className="py-16 md:py-24  bg-white border-b border-black/10">
         <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
           <div className="max-w-4xl">
-            <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-4">
+            <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
               Our Work
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.1] tracking-tight text-[#222222] mb-6">
@@ -56,8 +56,8 @@ const CaseStudiesPage = () => {
                   onClick={() => setActiveFilter(category)}
                   className={`px-4 py-2 text-sm font-medium transition-all duration-300 rounded-md ${
                     activeFilter === category
-                      ? "bg-[#00488b] text-white"
-                      : "bg-[#f8f9fa] text-[#555555] hover:bg-[#00488b]/10 hover:text-[#00488b]"
+                      ? "bg-blue text-white"
+                      : "bg-[#f8f9fa] text-[#555555] hover:bg-blue/10 hover:text-blue"
                   }`}
                 >
                   {category}
@@ -76,7 +76,7 @@ const CaseStudiesPage = () => {
                 placeholder="Search case studies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full md:w-64 pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md"
+                className="w-full md:w-64 pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-blue transition-colors duration-300 rounded-md"
               />
             </div>
           </div>
@@ -103,7 +103,7 @@ const CaseStudiesPage = () => {
                     animationDelay: `${index * 100}ms`,
                   }}
                 >
-                  <article className="h-full border border-black/10 bg-white hover:border-[#00488b]/30 hover:shadow-xl transition-all duration-400 overflow-hidden rounded-lg">
+                  <article className="h-full border border-black/10 bg-white hover:border-blue/30 hover:shadow-xl transition-all duration-400 overflow-hidden rounded-lg">
                     {/* Image */}
                     <div className="relative overflow-hidden aspect-16/10">
                       <img
@@ -115,7 +115,7 @@ const CaseStudiesPage = () => {
 
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 bg-[#b80101] text-white text-xs font-medium rounded">
+                        <span className="px-3 py-1 bg-red text-white text-xs font-medium rounded">
                           {study.category}
                         </span>
                       </div>
@@ -133,7 +133,7 @@ const CaseStudiesPage = () => {
                       <p className="text-[#888888] text-sm mb-2">
                         {study.client}
                       </p>
-                      <h3 className="text-xl font-semibold text-[#222222] mb-3 group-hover:text-[#00488b] transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-[#222222] mb-3 group-hover:text-blue transition-colors duration-300">
                         {study.title}
                       </h3>
                       <p className="text-[#555555] text-sm leading-relaxed line-clamp-3 mb-4">
@@ -142,13 +142,13 @@ const CaseStudiesPage = () => {
 
                       {/* Results Preview */}
                       {/* <div className="flex items-center gap-4 pt-4 border-t border-black/10">
-                        <span className="text-[#b80101] text-sm font-semibold">
+                        <span className="text-red text-sm font-semibold">
                           {study.results[0]}
                         </span>
                       </div> */}
 
                       {/* View Link */}
-                      <div className="flex items-center gap-2 mt-4 text-[#00488b] group-hover:text-[#003366] transition-colors duration-300">
+                      <div className="flex items-center gap-2 mt-4 text-blue group-hover:text-[#003366] transition-colors duration-300">
                         <span className="text-sm font-medium">
                           View Case Study
                         </span>
@@ -177,7 +177,7 @@ const CaseStudiesPage = () => {
               { value: "30d", label: "Post-Launch Warranty" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-[#b80101] mb-2">
+                <p className="text-4xl md:text-5xl font-bold text-red mb-2">
                   {stat.value}
                 </p>
                 <p className="text-white/70 text-sm">{stat.label}</p>
@@ -200,7 +200,7 @@ const CaseStudiesPage = () => {
               </p>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#00488b] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366] rounded-md"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366] rounded-md"
               >
                 View Our Plans
                 <ArrowUpRight size={18} className="ml-2" />

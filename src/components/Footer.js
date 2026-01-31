@@ -39,25 +39,25 @@ const Footer = () => {
                 <div className="flex items-center gap-2">
                   <a
                     href="#"
-                    className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
+                    className="w-8 h-8 flex items-center justify-center bg-blue text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
                   >
                     <Linkedin size={16} />
                   </a>
                   <a
                     href="#"
-                    className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
+                    className="w-8 h-8 flex items-center justify-center bg-blue text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
                   >
                     <Instagram size={16} />
                   </a>
                   <a
                     href="#"
-                    className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
+                    className="w-8 h-8 flex items-center justify-center bg-blue text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
                   >
                     <Twitter size={16} />
                   </a>
                   <a
                     href="#"
-                    className="w-8 h-8 flex items-center justify-center bg-[#00488b] text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
+                    className="w-8 h-8 flex items-center justify-center bg-blue text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
                   >
                     <Facebook size={16} />
                   </a>

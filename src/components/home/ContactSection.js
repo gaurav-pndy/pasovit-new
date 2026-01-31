@@ -31,7 +31,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <p className="text-[#b80101] text-sm font-semibold tracking-wider uppercase mb-4">
+            <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
               Get In Touch
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
@@ -77,7 +77,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md text-sm"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-blue transition-colors duration-300 rounded-md text-sm"
                       placeholder="Full Name"
                     />
                   </div>
@@ -88,7 +88,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md text-sm"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-blue transition-colors duration-300 rounded-md text-sm"
                       placeholder="Email Address"
                     />
                   </div>
@@ -99,7 +99,7 @@ const ContactSection = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md text-sm"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-blue transition-colors duration-300 rounded-md text-sm"
                     placeholder="Company Name"
                   />
                 </div>
@@ -110,13 +110,13 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md resize-none text-sm"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-blue transition-colors duration-300 rounded-md resize-none text-sm"
                     placeholder="Tell us about your project..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-[#00488b] text-white font-medium transition-all duration-400 hover:bg-[#003366] rounded-md"
+                  className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-blue text-white font-medium transition-all duration-400 hover:bg-[#003366] rounded-md"
                 >
                   Send Message
                   <Send size={16} className="ml-2" />

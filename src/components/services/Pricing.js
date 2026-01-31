@@ -12,12 +12,12 @@ const Pricing = () => {
               key={service.id}
               className={`relative p-8 border transition-all duration-400 rounded-lg ${
                 service.popular
-                  ? "border-[#00488b] bg-white shadow-xl lg:scale-100 z-10"
-                  : "border-black/10 bg-white lg:scale-95 hover:border-[#00488b]/30 hover:shadow-lg"
+                  ? "border-blue bg-white shadow-xl lg:scale-100 z-10"
+                  : "border-black/10 bg-white lg:scale-95 hover:border-blue/30 hover:shadow-lg"
               }`}
             >
               {service.popular && (
-                <div className="absolute -top-3 left-8 px-4 py-1 bg-[#b80101] text-white text-xs font-semibold rounded">
+                <div className="absolute -top-3 left-8 px-4 py-1 bg-red text-white text-xs font-semibold rounded">
                   MOST POPULAR
                 </div>
               )}
@@ -30,7 +30,7 @@ const Pricing = () => {
                   {service.name}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-5xl font-bold text-[#00488b]">
+                  <span className="text-5xl font-bold text-blue">
                     {service.price}
                   </span>
                   <span className="text-[#888888] text-lg">
@@ -43,7 +43,7 @@ const Pricing = () => {
               {/* Key Metrics */}
               <div className="flex items-center gap-4 py-4 mb-6 border-y border-black/10">
                 <div className="flex items-center gap-2">
-                  <Code size={16} className="text-[#00488b]" />
+                  <Code size={16} className="text-blue" />
                   <span className="text-[#222222] text-sm font-medium">
                     {service.buildSlots} Build Slot
                     {service.buildSlots > 1 ? "s" : ""}
@@ -51,7 +51,7 @@ const Pricing = () => {
                 </div>
                 <div className="w-px h-4 bg-black/10" />
                 <div className="flex items-center gap-2">
-                  <Users size={16} className="text-[#00488b]" />
+                  <Users size={16} className="text-blue" />
                   <span className="text-[#222222] text-sm font-medium">
                     {service.strategyCalls}
                   </span>
@@ -68,7 +68,7 @@ const Pricing = () => {
                     <li key={index} className="flex items-start gap-3">
                       <Check
                         size={18}
-                        className="text-[#00488b] mt-0.5 shrink-0"
+                        className="text-blue mt-0.5 shrink-0"
                       />
                       <span className="text-[#555555] text-sm">{feature}</span>
                     </li>
@@ -86,7 +86,7 @@ const Pricing = () => {
                     <li key={index} className="flex items-start gap-3">
                       <Zap
                         size={18}
-                        className="text-[#b80101] mt-0.5 shrink-0"
+                        className="text-red mt-0.5 shrink-0"
                       />
                       <span className="text-[#555555] text-sm">{bonus}</span>
                     </li>
@@ -98,8 +98,8 @@ const Pricing = () => {
                 href={`mailto:${companyInfo.email}?subject=Interested in ${service.name} Plan`}
                 className={`w-full inline-flex items-center justify-center px-6 py-4 font-medium text-lg transition-all duration-400 rounded-md ${
                   service.popular
-                    ? "bg-[#00488b] text-white hover:bg-[#003366]"
-                    : "bg-[#f8f9fa] text-[#222222] border border-black/10 hover:bg-[#00488b] hover:text-white hover:border-[#00488b]"
+                    ? "bg-blue text-white hover:bg-[#003366]"
+                    : "bg-[#f8f9fa] text-[#222222] border border-black/10 hover:bg-blue hover:text-white hover:border-blue"
                 }`}
               >
                 Get Started

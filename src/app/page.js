@@ -22,7 +22,7 @@ export default function HomePage() {
         <PainPoints />
         <Process />
         <WhatWeBuild />
-        <ServicesPreview />
+        {/* <ServicesPreview /> */}
         <PricingTable />
         <FlexibleOptions />
         <Guarantees />

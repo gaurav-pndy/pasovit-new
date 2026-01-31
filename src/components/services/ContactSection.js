@@ -30,8 +30,8 @@ const ContactSection = () => {
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
         <div className="relative p-12 md:p-16 bg-[#222222] overflow-hidden rounded-xl">
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#00488b]/20 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#b80101]/10 blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue/20 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-red/10 blur-3xl" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Content */}
@@ -90,7 +90,7 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md"
+                        className="w-full pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-blue transition-colors duration-300 rounded-md"
                         placeholder="John Doe"
                       />
                     </div>
@@ -115,7 +115,7 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md"
+                        className="w-full pl-12 pr-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-blue transition-colors duration-300 rounded-md"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -134,7 +134,7 @@ const ContactSection = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md"
+                      className="w-full px-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-blue transition-colors duration-300 rounded-md"
                       placeholder="Your Company"
                     />
                   </div>
@@ -153,14 +153,14 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-[#00488b] transition-colors duration-300 rounded-md resize-none"
+                      className="w-full px-4 py-3 bg-[#f8f9fa] border border-black/10 text-[#222222] placeholder-[#888888] focus:outline-none focus:border-blue transition-colors duration-300 rounded-md resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center px-6 py-4 bg-[#00488b] text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366] rounded-md"
+                    className="w-full inline-flex items-center justify-center px-6 py-4 bg-blue text-white font-medium text-lg transition-all duration-400 hover:bg-[#003366] rounded-md"
                   >
                     Send Message
                     <Send size={18} className="ml-2" />

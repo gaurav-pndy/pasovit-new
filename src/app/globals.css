@@ -19,6 +19,11 @@
   --radius-lg: 8px;
 }
 
+@theme inline{
+  --color-blue: #00488b;
+  --color-red: #b80101;
+}
+
 
 
 html {
