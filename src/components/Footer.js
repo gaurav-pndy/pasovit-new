@@ -201,7 +201,10 @@ const Footer = () => {
         </div>
 
         {/* bottom bar */}
-        <div className=" flex flex-col items-center justify-between gap-2  py-4 pb-6 px-10 md:px-12 shape md:translate-y-1  bg-white small-text text-dark md:flex-row ">
+        <div
+          className=" flex flex-col items-center justify-between gap-2  py-4 pb-6 px-10 md:px-12 shape 
+  bg-white small-text text-dark md:flex-row "
+        >
           <span>
             © {new Date().getFullYear()} PASOVIT. All rights reserved.
           </span>

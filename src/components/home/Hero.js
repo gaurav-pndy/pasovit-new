@@ -121,7 +121,7 @@ export default function Hero() {
                   <Database className="w-4 md:w-6 h-4 md:h-6 text-blue" />
                 </div>
                 <div className="absolute top-1/2 -right-5 w-6 md:w-10 h-6 md:h-10 bg-blue rounded-lg shadow-lg flex items-center justify-center">
-                  <Server className="h-3 md:w-5 h-3 md:h-5 text-white" />
+                  <Server className="w-3 md:w-5 h-3 md:h-5 text-white" />
                 </div>
               </div>
             </div>

@@ -105,11 +105,14 @@ body {
     arc by var(--r) var(--r) of var(--r)
   )
 }
-
 .shape {
   --r: 26px;
-
+  /* position: relative;
+  width: calc(100% + 2px);
+  margin-left: -1px;
+  transform: translateZ(0); */
 }
+
 
 button{
   cursor:  pointer !important;
