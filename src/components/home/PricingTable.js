@@ -149,73 +149,64 @@ const PricingTable = () => {
         <div className="hidden lg:block">
           <div className="relative">
             {/* Main comparison container */}
-            <div className="relative bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5 overflow-hidden">
+            <div className="relative bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5 ">
+              {/* Scale column border overlay */}
+              <div
+                className="pointer-events-none absolute top-0 bottom-0 left-1/2 w-1/4
+             border-3 border-blue
+shadow-[2px_2px_10px_10px_rgba(0,72,139,0.25)]
+ rounded-xl z-20"
+                style={{ transform: "translateX(0%)" }}
+              />
+
               {/* Subtle inner glow */}
               <div className="absolute inset-0 shadow-inner"></div>
 
-              <table className="w-full relative">
+              <table className="w-full rounded-2xl overflow-hidden relative">
                 <thead>
-                  <tr className="border-b-2 border-gray-100">
-                    <th className="w-1/4 px-6 xl:px-8 py-4 text-left bg-linear-to-br from-gray-50 to-white">
-                      <span className="text-gray-500 text-sm uppercase tracking-widest font-semibold">
+                  <tr className="border-b border-gray-200 bg-dark-gray text-white">
+                    <th className="w-1/4 px-6 xl:px-8 py-4 text-left">
+                      <span className="text-gray-300 text-sm uppercase tracking-widest font-semibold">
                         Compare Plans
                       </span>
                     </th>
 
-                    {/* Launch Column */}
-                    <th className="w-1/4 px-6 xl:px-8 py-4 text-center relative bg-linear-to-br from-white to-gray-50/30">
-                      <div className="relative z-10">
-                        <div className="text-gray-700 font-bold text-lg ">
-                          Launch
-                        </div>
-                        <div className="flex items-baseline justify-center gap-1 mb-1">
-                          <span className="text-gray-500 text-sm">$</span>
-                          <span className="text-4xl font-bold text-gray-900 tracking-tight">
-                            3,000
-                          </span>{" "}
-                          <span className="text-gray-400 text-sm">/ month</span>
-                        </div>
+                    <th className="w-1/4 px-6 xl:px-8 py-4 text-center">
+                      <div className="text-gray-200 font-bold text-lg">
+                        Launch
+                      </div>
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-gray-400 text-sm">$</span>
+                        <span className="text-4xl font-bold text-white tracking-tight">
+                          3,000
+                        </span>
+                        <span className="text-gray-400 text-sm">/ month</span>
                       </div>
                     </th>
 
-                    {/* Scale Column - HIGHLIGHTED */}
+                    {/* SCALE – Border Highlight Only */}
                     <th className="w-1/4 px-6 xl:px-8 py-4 text-center relative">
-                      {/* Column background with gradient and border */}
-                      <div className="absolute inset-0 bg-linear-to-br from-[#003366] via-blue to-[#005fa3] shadow-xl"></div>
-
-                      {/* Shine effect */}
-                      <div className="absolute inset-0 bg-linear-to-br from-white/20 via-transparent to-transparent opacity-50"></div>
-
-                      {/* Top border highlight */}
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/40 to-transparent"></div>
-
-                      <div className="relative z-10">
-                        <div className="text-white font-bold text-lg  drop-shadow-sm">
-                          Scale
-                        </div>
-                        <div className="flex items-baseline justify-center gap-1 mb-1">
-                          <span className="text-white/80 text-sm">$</span>
-                          <span className="text-4xl font-bold text-white tracking-tight drop-shadow-md">
-                            6,000
-                          </span>{" "}
-                          <span className="text-white/70 text-sm">/ month</span>
-                        </div>
+                      <div className="absolute inset-0  pointer-events-none" />
+                      <div className="text-white font-bold text-lg">Scale</div>
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-gray-300 text-sm">$</span>
+                        <span className="text-4xl xl:text-5xl font-bold text-white tracking-tight">
+                          6,000
+                        </span>
+                        <span className="text-gray-300 text-sm">/ month</span>
                       </div>
                     </th>
 
-                    {/* Enterprise Column */}
-                    <th className="w-1/4 px-6 xl:px-8 py-4 text-center relative bg-linear-to-br from-white to-gray-50/30">
-                      <div className="relative z-10">
-                        <div className="text-gray-700 font-bold text-lg mb-2">
-                          Enterprise
-                        </div>
-                        <div className="flex items-baseline justify-center gap-1 mb-1">
-                          <span className="text-gray-500 text-sm">$</span>
-                          <span className="text-4xl font-bold text-gray-900 tracking-tight">
-                            9,000
-                          </span>{" "}
-                          <span className="text-gray-400 text-sm">/ month</span>
-                        </div>
+                    <th className="w-1/4 px-6 xl:px-8 py-4 text-center">
+                      <div className="text-gray-200 font-bold text-lg">
+                        Enterprise
+                      </div>
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-gray-400 text-sm">$</span>
+                        <span className="text-4xl font-bold text-white tracking-tight">
+                          9,000
+                        </span>
+                        <span className="text-gray-400 text-sm">/ month</span>
                       </div>
                     </th>
                   </tr>
@@ -233,25 +224,6 @@ const PricingTable = () => {
                     IconComponent={Flame}
                     firstRow
                   />
-
-                  {/* Deliverables Section Header */}
-                  <tr>
-                    <td
-                      colSpan={4}
-                      className="px-6 xl:px-8 py-4 bg-linear-to-r from-gray-50 via-white to-gray-50"
-                    >
-                      <div className="flex items-center gap-4">
-                        <div className="h-0.5 flex-1 bg-linear-to-r from-transparent via-red to-red/50"></div>
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-red blur-lg opacity-20"></div>
-                          <span className="relative text-red font-bold text-sm uppercase tracking-[0.2em] px-4">
-                            Deliverables
-                          </span>
-                        </div>
-                        <div className="h-0.5 flex-1 bg-linear-to-r from-red/50 to-transparent"></div>
-                      </div>
-                    </td>
-                  </tr>
 
                   <ComparisonRow
                     label="Active Build Slots"
@@ -334,66 +306,114 @@ const PricingTable = () => {
                     highlight="green"
                     alternate
                   />
-
-                  {/* SLA Section Header */}
-                  <tr>
-                    <td
-                      colSpan={4}
-                      className="px-6 xl:px-8 py-6 bg-linear-to-r from-gray-50 via-white to-gray-50"
-                    >
-                      <div className="flex items-center gap-4">
-                        <div className="h-0.5 flex-1 bg-linear-to-r from-transparent via-blue to-blue/50"></div>
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-blue blur-lg opacity-20"></div>
-                          <span className="relative text-blue font-bold text-sm uppercase tracking-[0.2em] px-4">
-                            SLA Breakdown
-                          </span>
-                        </div>
-                        <div className="h-0.5 flex-1 bg-linear-to-r from-blue/50 to-transparent"></div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <SLAComparisonRow
-                    label="S1 — Critical"
-                    values={[
-                      { response: "4 business hrs", fix: "1 business day" },
-                      { response: "2 business hrs", fix: "12 business hrs" },
-                      { response: "1 business hr", fix: "4 business hrs" },
-                    ]}
-                    severity="critical"
-                  />
-                  <SLAComparisonRow
-                    label="S2 — High"
-                    values={[
-                      { response: "1 business day", fix: "2 business days" },
-                      { response: "12 business hrs", fix: "1 business day" },
-                      { response: "6 business hrs", fix: "8 business hrs" },
-                    ]}
-                    severity="high"
-                    alternate
-                  />
-                  <SLAComparisonRow
-                    label="S3 — Medium"
-                    values={[
-                      { fix: "2 business days" },
-                      { fix: "2 business days" },
-                      { fix: "12 business hrs" },
-                    ]}
-                    severity="medium"
-                  />
-                  <SLAComparisonRow
-                    label="S4 — Low"
-                    values={[
-                      { fix: "5 business days" },
-                      { fix: "5 business days" },
-                      { fix: "2 business days" },
-                    ]}
-                    severity="low"
-                    alternate
-                  />
                 </tbody>
               </table>
+            </div>
+            {/* SLA TABLE */}
+            <div className="mt-10">
+              <div className="bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5 relative">
+               
+
+                <table className="w-full rounded-2xl overflow-hidden">
+                  <thead className="bg-dark-gray">
+                    {/* Section Title */}
+                    <tr>
+                      <td colSpan={5} className="px-6 xl:px-8 py-4">
+                        <div className="flex items-center gap-4">
+                          <div className="h-0.5 flex-1 bg-linear-to-r from-transparent via-white to-white/50"></div>
+                          <span className="text-white font-bold text-sm uppercase tracking-[0.2em] px-4">
+                            SLA Breakdown
+                          </span>
+                          <div className="h-0.5 flex-1 bg-linear-to-r from-white/50 via-white to-transparent"></div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    {/* Main Headers */}
+                    <tr className="bg-dark-gray border-b border-white/10">
+                      <th className="px-6 py-3 text-center text-xs uppercase tracking-widest text-gray-300">
+                        Severity
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs uppercase tracking-widest text-gray-300">
+                        What it Includes
+                      </th>
+                      <th
+                        colSpan={3}
+                        className="px-6 py-3 text-center text-xs uppercase tracking-widest text-gray-300"
+                      >
+                        Time
+                      </th>
+                    </tr>
+
+                    {/* Sub Headers */}
+                    <tr className="relative bg-dark-gray border-b border-white/10">
+                      <th></th>
+                      <th></th>
+
+                      <th className="px-6 py-2 text-center text-[11px] uppercase tracking-widest text-gray-400">
+                        Launch
+                      </th>
+
+                      {/* Scale Highlight */}
+                      <th className="px-6 py-2 text-center text-[11px] uppercase tracking-widest text-gray-400">
+                        Scale
+                      </th>
+
+                      <th className="px-6 py-2 text-center text-[11px] uppercase tracking-widest text-gray-400">
+                        Enterprise
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <SLAComparisonRow
+                      label="S1 - Critical"
+                      severity="critical"
+                      includes="Production outage or critical workflow blocked; security/data loss risk; no workaround."
+                      values={[
+                        { response: "4 business hrs", fix: "1 business day" },
+                        { response: "2 business hrs", fix: "12 business hrs" },
+                        { response: "1 business hr", fix: "4 business hrs" },
+                      ]}
+                    />
+
+                    <SLAComparisonRow
+                      label="S2 - High"
+                      severity="high"
+                      alternate
+                      includes="Core feature broken or severely degraded; many users or key customers affected; workaround limited."
+                      values={[
+                        { response: "4 business hrs", fix: "1 business day" },
+                        { response: "2 business hrs", fix: "12 business hrs" },
+                        { response: "1 business hr", fix: "4 business hrs" },
+                      ]}
+                    />
+
+                    <SLAComparisonRow
+                      label="S3 - Medium"
+                      severity="medium"
+                      includes="Non-core issue or limited subset impacted; workaround available; business can continue."
+                      values={[
+                        { response: "4 business hrs", fix: "1 business day" },
+                        { response: "2 business hrs", fix: "12 business hrs" },
+                        { response: "1 business hr", fix: "4 business hrs" },
+                      ]}
+                    />
+
+                    <SLAComparisonRow
+                      label="S4 - Low"
+                      severity="low"
+                      alternate
+                      includes="Cosmetic or minor bug/request; negligible impact; scheduled in backlog."
+                      values={[
+                        { response: "4 business hrs", fix: "1 business day" },
+                        { response: "2 business hrs", fix: "12 business hrs" },
+                        { response: "1 business hr", fix: "4 business hrs" },
+                      ]}
+                    />
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

@@ -14,13 +14,13 @@ const logos = [
 
 const ClientLogoLoop = () => {
   return (
-    <section className="relative py-10 overflow-hidden bg-[#222222]">
+    <section className="relative py-6 md:py-10 overflow-hidden bg-dark-gray">
       {/* This keeps LEFT aligned with rest of site */}
-      <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
+      <div className=" px-5 md:px-[7.6923%] lg:px-12 xl:px-16">
         <div className="flex items-center gap-8">
           {/* Left Label */}
-          <p className="shrink-0 text-sm md:text-base uppercase font-semibold tracking-wide text-white">
-            Trusted by <br className="md:hidden" /> the best
+          <p className="shrink-0 text-sm md:text-xl uppercase font-semibold tracking-wide leading-relaxed text-white">
+            Trusted by <br /> the best
           </p>
 
           {/* Full-bleed right container */}
@@ -28,7 +28,7 @@ const ClientLogoLoop = () => {
             {/* Break out to the right */}
             <div className="relative w-screen -mr-[10vw] ">
               {/* Fade Overlays */}
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-[25%] bg-linear-to-r from-[#222222]  to-transparent z-10" />
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-[25%] bg-linear-to-r from-dark-gray  to-transparent z-10" />
 
               <Marquee
                 speed={40}

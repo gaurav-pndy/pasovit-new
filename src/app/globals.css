@@ -22,6 +22,8 @@
 @theme inline{
   --color-blue: #00488b;
   --color-red: #b80101;
+  --color-dark-gray: #222222;
+  --breakpoint-2xl: 94rem;
 }
 
 

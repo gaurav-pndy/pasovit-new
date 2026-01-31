@@ -15,7 +15,7 @@ const MobilePricingCard = ({
       )}
 
       <div
-        className={`relative rounded-2xl shadow-xl shadow-black/5 overflow-hidden  border-2 transition-all duration-300 ${
+        className={`relative pb-4 rounded-2xl shadow-xl shadow-black/5 overflow-hidden  border-2 transition-all duration-300 ${
           popular
             ? "border-blue bg-linear-to-br from-white via-blue-50/30 to-white"
             : "border-gray-200 bg-white"
@@ -198,14 +198,7 @@ const ComparisonRow = ({
       </td>
 
       {values.map((value, idx) => (
-        <td
-          key={idx}
-          className={`px-6  py-3 text-center relative  ${
-            idx === 1
-              ? "bg-linear-to-br from-[#003366] via-blue to-[#005fa3] "
-              : ""
-          }`}
-        >
+        <td key={idx} className={`px-6  py-3 text-center relative  `}>
           <div
             className={`inline-flex items-center justify-center px-4 py-2 rounded-lg transition-all ${
               checkmarks
@@ -217,7 +210,7 @@ const ComparisonRow = ({
                     : highlight === "green" && value !== "—"
                       ? "bg-emerald-100 border border-emerald-300 text-emerald-700 text-xs xl:text-sm font-semibold shadow-sm"
                       : idx === 1 && !checkmarks
-                        ? "text-white font-semibold text-xs xl:text-sm bg-white/10 backdrop-blur-sm"
+                        ? "text-blue font-semibold text-xs xl:text-sm"
                         : "text-gray-700 text-xs xl:text-sm font-medium"
             }`}
           >
@@ -230,7 +223,7 @@ const ComparisonRow = ({
 };
 
 // SLA Comparison Row
-const SLAComparisonRow = ({ label, values, severity, alternate }) => {
+const SLAComparisonRow = ({ label, includes, values, severity, alternate }) => {
   const severityConfig = {
     critical: {
       bg: "from-red-50 to-red-100",
@@ -258,46 +251,47 @@ const SLAComparisonRow = ({ label, values, severity, alternate }) => {
 
   return (
     <tr
-      className={`group transition-all border-b border-gray-100 ${
+      className={`transition-all ${
         alternate ? "bg-gray-50/50" : "bg-white"
-      } hover:bg-blue-50/30`}
+      } border-b border-gray-100 hover:bg-blue-50/30`}
     >
-      <td className="px-6  py-3">
+      {/* Severity */}
+      <td className="px-6 py-4 min-w-40 xl:min-w-42">
         <div
-          className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-linear-to-r ${config.bg} shadow-sm`}
+          className={`inline-flex items-center gap-2 px-3 xl:px-4 py-2 rounded-lg bg-linear-to-r ${config.bg} shadow-sm`}
         >
           <div
-            className={`w-2.5 h-2.5 rounded-full ${config.dot} shadow-lg`}
-          ></div>
-          <span className={`${config.text} font-semibold text-sm xl:text-base`}>
+            className={`w-2 xl:w-2.5 h-2 xl:h-2.5 rounded-lg ${config.dot}`}
+          />
+          <span className={`${config.text} font-semibold text-xs xl:text-sm`}>
             {label}
           </span>
         </div>
       </td>
+
+      {/* What it Includes */}
+      <td className="px-6 py-4 text-gray-800 text-sm leading-relaxed w-72 xl:w-80">
+        {includes}
+      </td>
+
+      {/* Time Column */}
       {values.map((value, idx) => (
-        <td
-          key={idx}
-          className={`px-6  py-3 text-center ${
-            idx === 1
-              ? "bg-linear-to-br from-[#003366] via-blue to-[#005fa3]"
-              : ""
-          }`}
-        >
+        <td key={idx} className={`px-6  py-3 text-center`}>
           <div className="space-y-1.5">
             {value.response && (
-              <div className="text-gray-400 text-[10px] xl:text-xs uppercase tracking-wider font-medium">
+              <div className="text-gray-500 text-[10px] xl:text-xs uppercase tracking-wider font-medium">
                 Response:{" "}
                 <span
-                  className={`${idx === 1 ? "text-white font-semibold" : "text-gray-900 font-semibold"}`}
+                  className={`${idx === 1 ? "text-blue font-semibold" : "text-gray-900 font-semibold"}`}
                 >
                   {value.response}
                 </span>
               </div>
             )}
-            <div className="text-gray-400 text-[10px] xl:text-xs uppercase tracking-wider font-medium">
+            <div className="text-gray-500 text-[10px] xl:text-xs uppercase tracking-wider font-medium">
               Fix:{" "}
               <span
-                className={`${idx === 1 ? "text-white font-semibold" : "text-emerald-600 font-semibold"}`}
+                className={`${idx === 1 ? "text-red font-semibold" : "text-emerald-600 font-semibold"}`}
               >
                 {value.fix}
               </span>

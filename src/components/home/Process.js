@@ -9,7 +9,7 @@ const Process = () => {
           <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">
             Our Process
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#222222] leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-gray leading-tight mb-6">
             How we work with our Clients
           </h2>
           <p className="text-[#555555] text-lg leading-relaxed">
@@ -27,31 +27,35 @@ const Process = () => {
                 <Layers size={16} />
                 <span>CLIENT PORTAL</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#222222]">
+              <h3 className="text-2xl md:text-3xl font-bold text-dark-gray">
                 Your Project Command Center
               </h3>
               <p className="text-[#555555] text-lg leading-relaxed">
-                Every client gets exclusive access to our in-house Client Portal
-                — a powerful project management platform where all
-                communications happen, tasks are tracked, and progress is
-                visible in real-time.
+                Every Client gets Free Exclusive Access to our In-House,
+                Custom-Built Client Portal. It is a powerful platform with:
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {[
-                  "Real-time task tracking & progress updates",
-                  "Centralized communication thread",
-                  "File sharing & asset management",
-                  "Milestone tracking & delivery timelines",
-                  "Direct access to your dedicated team",
+                  "Real-time Task tracking, Progress updates, and Delivery timelines (Project Management)",
+                  "Centralized communication thread (All messages securely stored)",
+                  "Unlimited users (No team member limitations unlike other SaaS tools)",
+                  "File sharing & asset management (All files within our server)",
+                  "Invoicing and Billing (Download all your invoices any time, and pay directly through the platform)",
+                  "Contracts (Any agreement we sign, you can always download it here)",
+                  "Ticketing System (To ensure we stick to the SLA mentioned in our pricing plans)",
                 ].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-md bg-blue/10 flex items-center justify-center">
+                  <li key={index} className="flex  gap-3">
+                    <div className="w-5 shrink-0 h-5 mt-1 rounded-md bg-blue/10 flex items-center justify-center">
                       <Check size={12} className="text-blue" />
                     </div>
                     <span className="text-[#555555]">{feature}</span>
                   </li>
                 ))}
               </ul>
+              <p className="text-[#555555] text-lg leading-relaxed">
+                You will know exactly what quality of work you can expect from
+                us, when we we use software built by us to fulfill your needs.
+              </p>
             </div>
             <div className="relative">
               <div className="bg-[#1a1a2e] rounded-xl p-5 shadow-2xl">
@@ -153,16 +157,20 @@ const Process = () => {
             const IconComponent = item.icon;
             return (
               <div key={item.step} className="relative group">
-                <div className="p-6 bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-400 h-full">
-                  <div className="w-14 h-14 flex items-center justify-center bg-linear-to-br from-blue to-[#003366] text-white mb-5 transition-all duration-400 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue/20 rounded-xl">
-                    <IconComponent size={24} />
+                <div className="p-4 bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-400 h-full">
+                  <div className="flex  gap-2 mb-5">
+                    <div className="w-12 h-12 flex items-center justify-center bg-linear-to-br from-blue to-[#003366] text-white  transition-all duration-400 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue/20 rounded-xl shrink-0">
+                      <IconComponent size={22} />
+                    </div>
+                    <div>
+                      <span className="text-xs mb-2 font-semibold text-blue  block">
+                        STEP {item.step}
+                      </span>
+                      <h3 className="text-lg font-semibold text-dark-gray leading-tight">
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
-                  <span className="text-xs font-semibold text-blue mb-2 block">
-                    STEP {item.step}
-                  </span>
-                  <h3 className="text-lg font-semibold text-[#222222] mb-2">
-                    {item.title}
-                  </h3>
                   <p className="text-[#888888] text-sm leading-relaxed">
                     {item.description}
                   </p>
