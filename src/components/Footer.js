@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Linkedin,
@@ -12,15 +12,40 @@ import {
   MapPin,
 } from "lucide-react";
 import { companyInfo } from "@/data/mock";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const scrollToSection = (id) => {
+    const offset = 120;
+
+    const attemptScroll = () => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+      return true;
+    };
+
+    // Already on home → just scroll
+    if (pathname === "/") {
+      attemptScroll();
+      return;
+    }
+
+    // On another page → go home with intent
+    router.push(`/#${id}`);
+  };
   return (
     <footer className="relative mt-16 max-w-348 mx-auto rounded-t-4xl md:rounded-4xl md:mb-1 bg-[#222222]">
       <div className="mx-auto max-w-7xl px-4 py-10 pb-0">
         {/* Main Footer Content */}
         <div className="relative   ">
           <div className="max-w-350 mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
               {/* Brand Column */}
               <div className="lg:col-span-1">
                 <Link href="/" className="inline-block mb-2">
@@ -104,7 +129,7 @@ const Footer = () => {
               </div>
 
               {/* Case Studies Column */}
-              <div>
+              {/* <div>
                 <h4 className="text-white font-semibold mb-5">Case Studies</h4>
                 <ul className="space-y-3">
                   <li>
@@ -140,7 +165,7 @@ const Footer = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               {/* Quick Links Column */}
               <div>
@@ -155,21 +180,21 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/services"
+                    <button
+                      onClick={() => scrollToSection("pricing")}
                       className="text-white/60 hover:text-white text-sm transition-colors duration-300"
                     >
                       Services
-                    </Link>
+                    </button>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/case-studies"
                       className="text-white/60 hover:text-white text-sm transition-colors duration-300"
                     >
                       Case Studies
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 

@@ -26,7 +26,7 @@ export default function HomePage() {
         <PricingTable />
         <FlexibleOptions />
         <Guarantees />
-        <CaseStudiesPreview />
+        {/* <CaseStudiesPreview /> */}
         <TechStack />
         <CalEmbed />
         <ContactSection />

@@ -21,7 +21,7 @@ import {
 
 const PricingTable = () => {
   return (
-    <section className="relative py-12 overflow-hidden ">
+    <section id="pricing" className="relative py-12 overflow-hidden ">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%] relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-red text-sm font-semibold tracking-wider uppercase mb-4">

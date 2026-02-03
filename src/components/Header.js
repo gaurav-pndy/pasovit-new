@@ -9,6 +9,7 @@ import { companyInfo } from "@/data/mock";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const pathname = usePathname();
 
   useEffect(() => {
@@ -61,15 +62,13 @@ const Header = () => {
           <Link
             href="/"
             className={`text-sm font-medium transition-colors duration-300 ${
-              isActive("/")
-                ? "text-blue"
-                : "text-[#555555] hover:text-blue"
+              isActive("/") ? "text-blue" : "text-[#555555] hover:text-blue"
             }`}
           >
             Home
           </Link>
-          <Link
-            href="/services"
+          <button
+            onClick={() => scrollToSection("pricing")}
             className={`text-sm font-medium transition-colors duration-300 ${
               isActive("/services")
                 ? "text-blue"
@@ -77,7 +76,7 @@ const Header = () => {
             }`}
           >
             Services
-          </Link>
+          </button>
         </div>
 
         {/* Center Logo */}
@@ -90,7 +89,7 @@ const Header = () => {
 
         {/* Right Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <Link
+          {/* <Link
             href="/case-studies"
             className={`text-sm font-medium transition-colors duration-300 ${
               isActive("/case-studies")
@@ -99,7 +98,7 @@ const Header = () => {
             }`}
           >
             Case Studies
-          </Link>
+          </Link> */}
           <button
             onClick={() => scrollToSection("contact-us")}
             className="inline-flex items-center justify-center px-5 py-2 bg-blue text-white text-sm font-medium transition-all duration-300 hover:bg-[#003366] rounded-md cursor-pointer!"
@@ -136,16 +135,18 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
-            href="/services"
-            onClick={() => setIsMobileMenuOpen(false)}
+          <button
+            onClick={() => {
+              scrollToSection("pricing");
+              setIsMobileMenuOpen(false);
+            }}
             className={`text-base font-medium py-2 transition-colors duration-300 ${
               isActive("/services") ? "text-blue" : "text-[#555555]"
             }`}
           >
             Services
-          </Link>
-          <Link
+          </button>
+          {/* <Link
             href="/case-studies"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`text-base font-medium py-2 transition-colors duration-300 ${
@@ -153,7 +154,7 @@ const Header = () => {
             }`}
           >
             Case Studies
-          </Link>
+          </Link> */}
           <button
             onClick={() => {
               scrollToSection("contact-us");
