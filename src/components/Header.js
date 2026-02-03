@@ -140,7 +140,7 @@ const Header = () => {
               scrollToSection("pricing");
               setIsMobileMenuOpen(false);
             }}
-            className={`text-base font-medium py-2 transition-colors duration-300 ${
+            className={`text-base font-medium text-left py-2 transition-colors duration-300 ${
               isActive("/services") ? "text-blue" : "text-[#555555]"
             }`}
           >
