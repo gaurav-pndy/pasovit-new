@@ -33,7 +33,7 @@ const WhatWeBuild = () => {
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <Link
             href="/case-studies"
             className="inline-flex items-center gap-2 text-white font-medium hover:gap-4 transition-all duration-300"
@@ -43,7 +43,7 @@ const WhatWeBuild = () => {
             </span>
             <ArrowRight size={18} className="text-blue" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
