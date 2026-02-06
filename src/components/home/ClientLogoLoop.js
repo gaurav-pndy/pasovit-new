@@ -19,7 +19,7 @@ const ClientLogoLoop = () => {
       <div className=" px-5 md:px-[7.6923%] lg:px-12 xl:px-16">
         <div className="flex items-center gap-8">
           {/* Left Label */}
-          <p className="shrink-0 text-sm md:text-xl uppercase font-semibold tracking-wide leading-relaxed text-white">
+          <p className="shrink-0 text-sm md:text-xl text-center uppercase font-semibold tracking-wide leading-relaxed text-white">
             Trusted by <br /> the best
           </p>
 

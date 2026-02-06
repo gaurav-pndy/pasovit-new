@@ -21,103 +21,118 @@ const Process = () => {
 
         {/* Client Portal Feature */}
         <div className="relative mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-10 bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5">
+          <div className=" p-4 sm:p-6 md:p-10 bg-white/70 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl shadow-black/5">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue/10 text-blue text-sm font-semibold rounded-md">
-                <Layers size={16} />
-                <span>CLIENT PORTAL</span>
+              <div className="flex flex-col lg:flex-row gap-6 lg:items-center ">
+                <div className="inline-flex w-fit shrink-0 items-center gap-2 px-4 py-2 bg-blue/10 text-blue text-sm font-semibold rounded-md">
+                  <Layers size={16} />
+                  <span>CLIENT PORTAL</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-dark-gray">
+                  Your Project Command Center
+                </h3>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-dark-gray">
-                Your Project Command Center
-              </h3>
               <p className="text-[#555555] text-lg leading-relaxed">
                 Every Client gets Free Exclusive Access to our In-House,
                 Custom-Built Client Portal. It is a powerful platform with:
               </p>
-              <ul className="space-y-2">
-                {[
-                  "Real-time Task tracking, Progress updates, and Delivery timelines (Project Management)",
-                  "Centralized communication thread (All messages securely stored)",
-                  "Unlimited users (No team member limitations unlike other SaaS tools)",
-                  "File sharing & asset management (All files within our server)",
-                  "Invoicing and Billing (Download all your invoices any time, and pay directly through the platform)",
-                  "Contracts (Any agreement we sign, you can always download it here)",
-                  "Ticketing System (To ensure we stick to the SLA mentioned in our pricing plans)",
-                ].map((feature, index) => (
-                  <li key={index} className="flex  gap-3">
-                    <div className="w-5 shrink-0 h-5 mt-1 rounded-md bg-blue/10 flex items-center justify-center">
-                      <Check size={12} className="text-blue" />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <ul className="space-y-2">
+                  {[
+                    "Project Management (Real-time Task tracking, Progress updates, and Delivery timelines)",
+                    "Centralized communication thread (All messages securely stored)",
+                    "Unlimited users (No team member limitations unlike other SaaS tools)",
+                    "File sharing & asset management (All files within our server)",
+                    "Invoicing and Billing (Download all your invoices any time, and pay directly through the platform)",
+                    "Contracts (Any agreement we sign, you can always download it here)",
+                    "Ticketing System (To ensure we stick to the SLA mentioned in our pricing plans)",
+                  ].map((feature, index) => {
+                    const [title, details] = feature.split(/\s*\((.+)\)/);
+
+                    return (
+                      <li key={index} className="flex gap-3">
+                        <div className="w-5 shrink-0 h-5 mt-1 rounded-md bg-blue/10 flex items-center justify-center">
+                          <Check size={12} className="text-blue" />
+                        </div>
+
+                        <span className="text-[#555555] leading-relaxed">
+                          <span className="font-semibold text-dark-gray">
+                            {title}
+                          </span>
+                          {details && <span> ({details})</span>}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                <div className="relative">
+                  <div className="bg-[#1a1a2e] rounded-xl p-5 shadow-2xl">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      <span className="ml-3 text-white/40 text-xs">
+                        Client Portal
+                      </span>
                     </div>
-                    <span className="text-[#555555]">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                    <div className="space-y-2.5">
+                      <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                        <div className="flex items-center gap-3">
+                          <div className="w-7 h-7 bg-emerald-500/20 rounded-md flex items-center justify-center">
+                            <Check size={12} className="text-emerald-400" />
+                          </div>
+                          <span className="text-white/80 text-sm">
+                            Dashboard UI Complete
+                          </span>
+                        </div>
+                        <span className="text-emerald-400 text-xs font-medium">
+                          Done
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-blue/30">
+                        <div className="flex items-center gap-3">
+                          <div className="w-7 h-7 bg-blue/20 rounded-md flex items-center justify-center">
+                            <Code size={12} className="text-[#60a5fa]" />
+                          </div>
+                          <span className="text-white/80 text-sm">
+                            API Integration
+                          </span>
+                        </div>
+                        <span className="text-[#60a5fa] text-xs font-medium">
+                          In Progress
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                        <div className="flex items-center gap-3">
+                          <div className="w-7 h-7 bg-white/10 rounded-md flex items-center justify-center">
+                            <Clock size={12} className="text-white/40" />
+                          </div>
+                          <span className="text-white/80 text-sm">
+                            User Testing
+                          </span>
+                        </div>
+                        <span className="text-white/40 text-xs font-medium">
+                          Queued
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-white/50">Sprint Progress</span>
+                        <span className="text-[#60a5fa] font-medium">67%</span>
+                      </div>
+                      <div className="mt-2 h-1.5 bg-white/10 rounded-md overflow-hidden">
+                        <div className="h-full w-2/3 bg-linear-to-r from-blue to-[#60a5fa] rounded-md"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p className="text-[#555555] text-lg leading-relaxed">
                 You will know exactly what quality of work you can expect from
                 us, when we we use software built by us to fulfill your needs.
               </p>
-            </div>
-            <div className="relative">
-              <div className="bg-[#1a1a2e] rounded-xl p-5 shadow-2xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-                  <span className="ml-3 text-white/40 text-xs">
-                    Client Portal
-                  </span>
-                </div>
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-7 h-7 bg-emerald-500/20 rounded-md flex items-center justify-center">
-                        <Check size={12} className="text-emerald-400" />
-                      </div>
-                      <span className="text-white/80 text-sm">
-                        Dashboard UI Complete
-                      </span>
-                    </div>
-                    <span className="text-emerald-400 text-xs font-medium">
-                      Done
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-blue/30">
-                    <div className="flex items-center gap-3">
-                      <div className="w-7 h-7 bg-blue/20 rounded-md flex items-center justify-center">
-                        <Code size={12} className="text-[#60a5fa]" />
-                      </div>
-                      <span className="text-white/80 text-sm">
-                        API Integration
-                      </span>
-                    </div>
-                    <span className="text-[#60a5fa] text-xs font-medium">
-                      In Progress
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-7 h-7 bg-white/10 rounded-md flex items-center justify-center">
-                        <Clock size={12} className="text-white/40" />
-                      </div>
-                      <span className="text-white/80 text-sm">
-                        User Testing
-                      </span>
-                    </div>
-                    <span className="text-white/40 text-xs font-medium">
-                      Queued
-                    </span>
-                  </div>
-                </div>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-white/50">Sprint Progress</span>
-                    <span className="text-[#60a5fa] font-medium">67%</span>
-                  </div>
-                  <div className="mt-2 h-1.5 bg-white/10 rounded-md overflow-hidden">
-                    <div className="h-full w-2/3 bg-linear-to-r from-blue to-[#60a5fa] rounded-md"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -1,8 +1,22 @@
+"use client";
+
 import { agencyPartner, companyInfo, projectBased } from "@/data/mock";
 import { ArrowUpRight, Check, Code, Settings } from "lucide-react";
 import React from "react";
 
 const FlexibleOptions = () => {
+  const scrollToSection = (id) => {
+    const offset = 120;
+
+    const el = document.getElementById(id);
+    if (!el) return false;
+
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+    return true;
+  };
+
   return (
     <section className="py-16">
       <div className="max-w-350 mx-auto px-5 md:px-[7.6923%]">
@@ -37,13 +51,13 @@ const FlexibleOptions = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href={`mailto:${companyInfo.email}?subject=Project Based Inquiry`}
+            <button
+              onClick={() => scrollToSection("contact-us")}
               className="inline-flex items-center justify-center px-5 py-2.5 bg-blue text-white font-medium text-sm transition-all duration-400 hover:bg-[#003366] rounded-md"
             >
               Discuss Your Project
               <ArrowUpRight size={14} className="ml-2" />
-            </a>
+            </button>
           </div>
 
           {/* Agency Partner */}
@@ -72,13 +86,13 @@ const FlexibleOptions = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href={`mailto:${companyInfo.email}?subject=Agency Partnership Inquiry`}
+            <button
+              onClick={() => scrollToSection("contact-us")}
               className="inline-flex items-center justify-center px-5 py-2.5 bg-[#222222] text-white font-medium text-sm transition-all duration-400 hover:bg-[#333333] rounded-md"
             >
               Partner With Us
               <ArrowUpRight size={14} className="ml-2" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
