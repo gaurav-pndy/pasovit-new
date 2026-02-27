@@ -279,7 +279,7 @@ const TermsOfUse = () => {
 
       <section className="max-w-350 mx-auto px-5 md:px-[7.6923%] mt-10">
         <p className="text-lg font-[600] text-[#001E8A]">
-          Last updated on 31 July 2024
+          Last updated on 22 January 2026
         </p>
 
         <div className="space-y-10 mt-10">

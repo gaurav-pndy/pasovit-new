@@ -10,6 +10,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  PhoneIcon,
 } from "lucide-react";
 import { companyInfo } from "@/data/mock";
 import { usePathname } from "next/navigation";
@@ -61,7 +62,7 @@ const Footer = () => {
                   Scale Smarter
                 </p>
                 {/* Social Icons */}
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <a
                     href="#"
                     className="w-8 h-8 flex items-center justify-center bg-blue text-white rounded-lg hover:bg-[#003366] transition-colors duration-300"
@@ -86,7 +87,7 @@ const Footer = () => {
                   >
                     <Facebook size={16} />
                   </a>
-                </div>
+                </div> */}
               </div>
 
               {/* Services Column */}
@@ -212,11 +213,24 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
+                    <a
+                      href={`tel:+918778931001`}
+                      className="text-white/60 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <PhoneIcon size={14} />
+                      +91 8778931001
+                    </a>
+                  </li>
+                  <li>
                     <span className="text-white/60 text-sm flex items-start gap-2">
                       <MapPin size={14} className="shrink-0 mt-1" />
-                      <span className="leading-relaxed">
-                        {companyInfo.address}
-                      </span>
+                      <p className="leading-relaxed">
+                        {companyInfo.address} <br />
+                        <strong>DBA: </strong>{" "}
+                        <a href="https://aeontrix,com" target="_blank" className="hover:underline">
+                          Aeontrix AI
+                        </a>
+                      </p>
                     </span>
                   </li>
                 </ul>

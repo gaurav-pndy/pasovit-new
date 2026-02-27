@@ -15,41 +15,41 @@ const contents = [
     title: "3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?",
     link: "information-shared-with-anyone",
   },
+  // {
+  //   title: "4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
+  //   link: "cookies-and-tracking",
+  // },
   {
-    title: "4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
-    link: "cookies-and-tracking",
-  },
-  {
-    title: "5. HOW LONG DO WE KEEP YOUR INFORMATION?",
+    title: "4. HOW LONG DO WE KEEP YOUR INFORMATION?",
     link: "how-long-we-keep-information",
   },
   {
-    title: "6. HOW DO WE KEEP YOUR INFORMATION SAFE?",
+    title: "5. HOW DO WE KEEP YOUR INFORMATION SAFE?",
     link: "keep-information-safe",
   },
   {
-    title: "7. WHAT ARE  YOUR PRIVACY RIGHTS?",
+    title: "6. WHAT ARE  YOUR PRIVACY RIGHTS?",
     link: "privacy-rights",
   },
   {
-    title: "8. CONTROLS FOR DO-NOT-TRACK FEATURES",
+    title: "7. CONTROLS FOR DO-NOT-TRACK FEATURES",
     link: "do-not-track-features",
   },
   {
-    title: "9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+    title: "8. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
     link: "california-residents-rights",
   },
   {
-    title: "10. DO WE MAKE UPDATES TO THIS NOTICE?",
+    title: "9. DO WE MAKE UPDATES TO THIS NOTICE?",
     link: "notice-updates",
   },
   {
-    title: "11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
+    title: "10. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
     link: "contact-us",
   },
   {
     title:
-      "12. HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT FROM YOU?",
+      "11. HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT FROM YOU?",
     link: "review-data",
   },
 ];
@@ -147,21 +147,18 @@ We may process or share your data that we hold based on the following legal basi
 More specifically, we may need to process your data or share your personal information in the following situations: 
 <b>Business Transfers.</b> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
 
-<b>Affiliates.</b> We may share your information with our affiliates, in which case we will require those affiliates to honour this privacy notice. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or that are under common control with us.
-
 <b>Business Partners.</b> We may share your information with our business partners to offer you certain products, services, or promotions.
-
-<b>Other Users.</b> When you share personal information (for example, by posting comments, contributions or other content to the Website) or otherwise interact with public areas of the Website, such personal information may be viewed by all users and may be publicly made available outside the Website in perpetuity. Similarly, other users will be able to view descriptions of your activity, communicate with you within our website, and view your profile.`,
+`,
   },
-  {
-    id: "cookies-and-tracking",
-    title: "4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
-    description: `<b>In Short:</b> We may use cookies and other tracking technologies to collect and store your information.
-We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie.`,
-  },
+  //   {
+  //     id: "cookies-and-tracking",
+  //     title: "4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
+  //     description: `<b>In Short:</b> We may use cookies and other tracking technologies to collect and store your information.
+  // We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie.`,
+  //   },
   {
     id: "how-long-we-keep-information",
-    title: "5. HOW LONG DO WE KEEP YOUR INFORMATION?",
+    title: "4. HOW LONG DO WE KEEP YOUR INFORMATION?",
     description: `<b>In Short:</b> We keep your information for as long as necessary to fulfil the purposes outlined in this privacy notice unless otherwise required by law.
 
 We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). No purpose in this notice will require us keeping your personal information for longer than 1 year.
@@ -169,14 +166,14 @@ When we have no ongoing legitimate business need to process your personal inform
   },
   {
     id: "keep-information-safe",
-    title: "6. HOW DO WE KEEP YOUR INFORMATION SAFE?",
+    title: "5. HOW DO WE KEEP YOUR INFORMATION SAFE?",
     description: `<b>In Short:</b> We aim to protect your personal information through a system of organizational and technical security measures.
 
 We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security, and improperly collect, access, steal, or modify your information. Although we will do our best to protect your personal information, transmission of personal information to and from our website is at your own risk. You should only access the Website within a secure environment.`,
   },
   {
     id: "privacy-rights",
-    title: "7. WHAT ARE YOUR PRIVACY RIGHTS?",
+    title: "6. WHAT ARE YOUR PRIVACY RIGHTS?",
     description: `<b>In Short:</b> <span class='italic'> In some regions, such as the European Economic Area (EEA) and United Kingdom (UK), you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time.</span>
 
 In some regions (like the EEA and UK), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; and (iv) if applicable, to data portability. In certain circumstances, you may also have the right to object to the processing of your personal information. To make such a request, please use the contact details provided below. We will consider and act upon any request in accordance with applicable data protection laws.
@@ -191,12 +188,12 @@ Cookies and similar technologies: Most Web browsers are set to accept cookies by
   },
   {
     id: "do-not-track-features",
-    title: "8. CONTROLS FOR DO-NOT-TRACK FEATURES",
+    title: "7. CONTROLS FOR DO-NOT-TRACK FEATURES",
     description: `Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this privacy notice.`,
   },
   {
     id: "california-residents-rights",
-    title: "9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+    title: "8. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
     description: `<b>In Short:</b> Yes, if you are a resident of California, you are granted specific rights regarding access to your personal information.
 
 California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.
@@ -264,14 +261,14 @@ Other privacy rights
   },
   {
     id: "notice-updates",
-    title: "10. DO WE MAKE UPDATES TO THIS NOTICE?",
+    title: "9. DO WE MAKE UPDATES TO THIS NOTICE?",
     description: `<b>In Short:</b> Yes, we will update this notice as necessary to stay compliant with relevant laws.
 
 We may update this privacy notice from time to time. The updated version will be indicated by an updated “Revised” date and the updated version will be effective as soon as it is accessible. If we make material changes to this privacy notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this privacy notice frequently to be informed of how we are protecting your information.`,
   },
   {
     id: "contact-us",
-    title: "11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
+    title: "10. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
     description: `If you have questions or comments about this notice, you may contact our Data Protection Officer (DPO), Praveen Sankaran, by email at praveen.s@pasovit.com, by phone at +919871819993, or by post to:
 
 <b>Pasovit Technologies Private Limited
@@ -283,7 +280,7 @@ India</b>`,
   {
     id: "review-data",
     title:
-      "12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
+      "11. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
     description: `Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please submit a request form by clicking here.`,
   },
 ];
@@ -327,7 +324,7 @@ const Privacy = () => {
 
       <section className="max-w-350 mx-auto px-5 md:px-[7.6923%] mt-10">
         <p className="text-lg font-[600] text-[#001E8A]">
-          Last updated on 31 July 2024
+          Last updated on 22 January 2026
         </p>
 
         <p className="text-[#262626] mt-5  ">

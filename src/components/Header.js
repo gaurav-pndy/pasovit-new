@@ -9,7 +9,7 @@ import { companyInfo } from "@/data/mock";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const pathname = usePathname();
 
   useEffect(() => {
@@ -89,16 +89,16 @@ const Header = () => {
 
         {/* Right Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          {/* <Link
-            href="/case-studies"
+          <Link
+            href="/contact"
             className={`text-sm font-medium transition-colors duration-300 ${
-              isActive("/case-studies")
+              isActive("/contact")
                 ? "text-blue"
                 : "text-[#555555] hover:text-blue"
             }`}
           >
-            Case Studies
-          </Link> */}
+            Contact Us
+          </Link>
           <button
             onClick={() => scrollToSection("contact-us")}
             className="inline-flex items-center justify-center px-5 py-2 bg-blue text-white text-sm font-medium transition-all duration-300 hover:bg-[#003366] rounded-md cursor-pointer!"
